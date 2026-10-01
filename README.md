@@ -36,6 +36,7 @@ dependencies beyond a POSIX shell.
 | `wrap <width> <text>` | Wrap text to `<width>` columns |
 | `indent <n> <text>` | Indent every line by `<n>` spaces |
 | `words <text>` | Count the words in the text |
+| `lines <text>` | Count the lines in the text |
 | `help` | Show usage |
 
 ## Development

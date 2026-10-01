@@ -48,6 +48,10 @@ check "indent adds leading spaces" "    hi" "$(./bin/astrycs indent 4 hi)"
 
 check "words counts whitespace-separated words" "3" "$(./bin/astrycs words 'a b c')"
 
+check "lines counts lines" "2" "$(./bin/astrycs lines 'a
+b')"
+check "lines reports zero for empty text" "0" "$(./bin/astrycs lines '')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
