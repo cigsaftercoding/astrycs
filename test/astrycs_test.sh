@@ -21,6 +21,9 @@ check "upper upcases text" "HELLO" "$(./bin/astrycs upper hello)"
 check "repeat emits N lines" "hi
 hi" "$(./bin/astrycs repeat 2 hi)"
 
+check "wrap breaks long lines" "aaa
+bbb" "$(./bin/astrycs wrap 3 aaabbb)"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

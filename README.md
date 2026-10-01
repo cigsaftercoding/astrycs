@@ -23,6 +23,7 @@ dependencies beyond a POSIX shell.
 | `echo <text>` | Print text back |
 | `upper <text>` | Upper-case the given text |
 | `repeat N TEXT` | Repeat `TEXT` `N` times |
+| `wrap <width> <text>` | Wrap text to `<width>` columns |
 | `help` | Show usage |
 
 ## Development

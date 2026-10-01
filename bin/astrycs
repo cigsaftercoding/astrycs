@@ -10,6 +10,7 @@ Commands:
   echo <text>    Print text back.
   upper <text>   Print text in upper case.
   repeat N TEXT  Print TEXT N times.
+  wrap <width> <text>  Wrap text to <width> columns.
   help           Show this message.
 EOF
 }
@@ -32,6 +33,11 @@ case "$cmd" in
             printf '%s\n' "$*"
             i=$((i + 1))
         done
+        ;;
+    wrap)
+        width="${1:-80}"
+        if [ $# -gt 0 ]; then shift; fi
+        printf '%s\n' "$*" | fold -s -w "$width"
         ;;
     help | -h | --help)
         usage
