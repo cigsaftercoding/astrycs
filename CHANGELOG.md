@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- `number-lines` command.
 - `urlencode` command.
 - `squeeze` command.
 - `mask` command.
