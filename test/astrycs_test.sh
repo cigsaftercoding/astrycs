@@ -23,6 +23,8 @@ hi" "$(./bin/astrycs repeat 2 hi)"
 
 check "lower downcases text" "hello" "$(./bin/astrycs lower HELLO)"
 
+check "len counts characters" "5" "$(./bin/astrycs len hello)"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
