@@ -55,6 +55,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `snake <text>` | Convert text to snake_case |
 | `capitalize <text>` | Upper-case the first letter only |
 | `swapcase <text>` | Swap the case of every letter |
+| `initials <text>` | Extract the initials of each word |
 | `help` | Show usage |
 
 ## Exit codes

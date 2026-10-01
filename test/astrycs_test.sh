@@ -82,6 +82,8 @@ check "capitalize only touches the first letter" "Hello world" "$(./bin/astrycs 
 
 check "swapcase inverts each letter" "hELLO" "$(./bin/astrycs swapcase Hello)"
 
+check "initials takes the first letter of each word" "JD" "$(./bin/astrycs initials 'john doe')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
