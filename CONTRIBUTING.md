@@ -32,6 +32,11 @@ and each pull request should keep its tests green on its own.
 sh test/astrycs_test.sh
 ```
 
+## Shell style
+
+Four-space indentation, POSIX constructs only, and no bashisms —
+`bin/astrycs` has to run under `dash` as well as `bash`.
+
 ## Code of conduct
 
 Be kind. Assume good intent. Keep reviews constructive.
