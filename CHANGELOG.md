@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- Composition examples in the readme.
 - Exit code documentation.
 - `camel` command for camelCase conversion.
 - Runtime requirements section in the readme.
