@@ -15,3 +15,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - `trim` command for stripping surrounding whitespace.
 - `join` command for joining arguments with a separator.
 - `slug` command for generating url slugs.
+- `pad` command for fixed-width output.
