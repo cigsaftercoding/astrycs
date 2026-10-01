@@ -26,6 +26,7 @@ dependencies beyond a POSIX shell.
 | `lower <text>` | Lower-case the given text |
 | `len <text>` | Print the length of the text |
 | `trim <text>` | Trim surrounding whitespace |
+| `join <sep> [text...]` | Join the remaining arguments with `<sep>` |
 | `help` | Show usage |
 
 ## Development

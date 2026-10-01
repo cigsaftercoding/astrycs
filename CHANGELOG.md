@@ -13,3 +13,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - `lower` command for lower-casing text.
 - `len` command for measuring text length.
 - `trim` command for stripping surrounding whitespace.
+- `join` command for joining arguments with a separator.
