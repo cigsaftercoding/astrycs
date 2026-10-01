@@ -21,6 +21,11 @@ Co-authors are welcome. Add them with a trailer:
 Co-authored-by: Name <email@example.com>
 ```
 
+## Scope
+
+One pull request per change. Bug fixes and features land separately,
+and each pull request should keep its tests green on its own.
+
 ## Checks
 
 ```sh

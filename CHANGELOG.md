@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- Pull request scope guidance.
 - `kebab` command for kebab-case conversion.
 - Composition examples in the readme.
 - Exit code documentation.
