@@ -1,0 +1,29 @@
+#!/usr/bin/env sh
+# Minimal test harness for astrycs.
+set -eu
+
+fail=0
+
+check() {
+    desc="$1"
+    expected="$2"
+    actual="$3"
+    if [ "$expected" = "$actual" ]; then
+        printf 'ok   - %s\n' "$desc"
+    else
+        printf 'FAIL - %s\n  expected: %s\n  actual:   %s\n' "$desc" "$expected" "$actual"
+        fail=1
+    fi
+}
+
+check "echo passes text through" "hello" "$(./bin/astrycs echo hello)"
+check "upper upcases text" "HELLO" "$(./bin/astrycs upper hello)"
+check "repeat emits N lines" "hi
+hi" "$(./bin/astrycs repeat 2 hi)"
+
+if [ "$fail" -ne 0 ]; then
+    printf '\nsome tests failed\n' >&2
+    exit 1
+fi
+
+printf '\nall tests passed\n'
