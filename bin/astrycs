@@ -16,6 +16,7 @@ Commands:
   join <sep> [text...]  Join the remaining arguments with <sep>.
   slug <text>   Convert text into a url slug.
   pad <width> <text>  Left-pad text with spaces up to width.
+  reverse <text>  Reverse the text.
   help           Show this message.
 EOF
 }
@@ -80,6 +81,15 @@ case "$cmd" in
             text=" $text"
         done
         printf '%s\n' "$text"
+        ;;
+    reverse)
+        printf '%s\n' "$*" | awk '{
+            n = length($0)
+            out = ""
+            for (i = n; i > 0; i--)
+                out = out substr($0, i, 1)
+            print out
+        }'
         ;;
     help | -h | --help)
         usage
