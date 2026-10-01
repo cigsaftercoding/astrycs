@@ -31,6 +31,8 @@ check "join inserts the separator" "a,b,c" "$(./bin/astrycs join , a b c)"
 
 check "slug builds url slugs" "hello-world" "$(./bin/astrycs slug 'Hello World')"
 
+check "pad left-pads to width" "  hi" "$(./bin/astrycs pad 4 hi)"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

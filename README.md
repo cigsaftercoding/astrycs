@@ -28,6 +28,7 @@ dependencies beyond a POSIX shell.
 | `trim <text>` | Trim surrounding whitespace |
 | `join <sep> [text...]` | Join the remaining arguments with `<sep>` |
 | `slug <text>` | Convert text into a url slug |
+| `pad <width> <text>` | Left-pad text with spaces up to `<width>` |
 | `help` | Show usage |
 
 ## Development
