@@ -84,6 +84,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `urlencode <text>` | Percent-encode reserved characters |
 | `number-lines <text>` | Prefix each line with its number |
 | `bullet [marker] <text>` | Prefix each line with a bullet |
+| `dedent <text>` | Strip leading whitespace from every line |
 | `help` | Show usage |
 
 ## Exit codes

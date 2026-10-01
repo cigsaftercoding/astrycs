@@ -208,6 +208,10 @@ check "bullet prefixes each line" "- a
 - b" "$(./bin/astrycs bullet '- ' "$(printf 'a\nb')")"
 
 
+check "dedent removes leading whitespace" "a
+b" "$(./bin/astrycs dedent "$(printf '  a
+  b')")" 
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

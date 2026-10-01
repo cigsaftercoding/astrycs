@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- `dedent` command.
 - `bullet` command.
 - `number-lines` command.
 - `urlencode` command.
