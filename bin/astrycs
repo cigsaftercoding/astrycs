@@ -49,6 +49,7 @@ Examples:
   split <sep> <text>  Split text on a separator, one per line.
   default <fallback> <text>  Fall back when the text is empty.
   take <n> <text>  Keep the first <n> words.
+  drop <n> <text>  Discard the first <n> words.
   help           Show this message.
 EOF
 }
@@ -323,6 +324,18 @@ case "$cmd" in
                 if (c > 0) out = out " "
                 out = out $i
                 c++
+            }
+            print out
+        }'
+        ;;
+    drop)
+        n="${1:-1}"
+        if [ $# -gt 0 ]; then shift; fi
+        printf '%s\n' "$*" | awk -v n="$n" '{
+            out = ""
+            for (i = n + 1; i <= NF; i++) {
+                if (out != "") out = out " "
+                out = out $i
             }
             print out
         }'
