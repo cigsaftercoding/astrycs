@@ -212,6 +212,9 @@ check "dedent removes leading whitespace" "a
 b" "$(./bin/astrycs dedent "$(printf '  a
   b')")" 
 
+check "indent-right pads to the requested width" "4" "$(./bin/astrycs len "$(./bin/astrycs indent-right 2 hi)")"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

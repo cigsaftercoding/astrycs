@@ -85,6 +85,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `number-lines <text>` | Prefix each line with its number |
 | `bullet [marker] <text>` | Prefix each line with a bullet |
 | `dedent <text>` | Strip leading whitespace from every line |
+| `indent-right <n> <text>` | Indent every line on the right |
 | `help` | Show usage |
 
 ## Exit codes
