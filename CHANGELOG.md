@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- `unique-words` command.
 - `reverse-words` command.
 - `drop` command.
 - `take` command.
