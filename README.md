@@ -62,6 +62,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `is-empty <text>` | Report whether the text is empty |
 | `is-number <text>` | Report whether the text is numeric |
 | `split <sep> <text>` | Split text on a separator, one per line |
+| `default <fallback> <text>` | Fall back when the text is empty |
 | `help` | Show usage |
 
 ## Exit codes
