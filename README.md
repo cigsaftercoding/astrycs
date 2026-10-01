@@ -69,6 +69,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `unique-words <text>` | Sort and deduplicate the words |
 | `count-char <char> <text>` | Count occurrences of a character |
 | `sum [numbers...]` | Add the given numbers |
+| `max [numbers...]` | Print the largest number |
 | `help` | Show usage |
 
 ## Exit codes

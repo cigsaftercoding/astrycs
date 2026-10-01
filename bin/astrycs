@@ -54,6 +54,7 @@ Examples:
   unique-words <text>  Sort and deduplicate the words.
   count-char <char> <text>  Count occurrences of a character.
   sum [numbers...]  Add the given numbers.
+  max [numbers...]  Print the largest number.
   help           Show this message.
 EOF
 }
@@ -369,6 +370,14 @@ case "$cmd" in
         ;;
     sum)
         printf '%s\n' "$*" | awk '{ t = 0; for (i = 1; i <= NF; i++) t += $i; print t }'
+        ;;
+    max)
+        printf '%s\n' "$*" | awk 'NF {
+            if (!seen || $1 > m) m = $1
+            seen = 1
+            for (i = 2; i <= NF; i++) if ($i > m) m = $i
+        }
+        END { if (seen) print m }'
         ;;
     help | -h | --help)
         usage

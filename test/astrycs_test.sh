@@ -150,6 +150,9 @@ check "count-char counts occurrences" "2" "$(./bin/astrycs count-char l hello)"
 check "sum adds the numbers" "6" "$(./bin/astrycs sum 1 2 3)"
 
 
+check "max finds the largest" "9" "$(./bin/astrycs max 3 9 5)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
