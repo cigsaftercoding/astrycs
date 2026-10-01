@@ -20,6 +20,7 @@ Commands:
   strip <chars> <text>  Delete the given characters from the text.
   title <text>   Capitalize the first letter of each word.
   nospace <text>  Collapse whitespace runs into single spaces.
+  wrap <width> <text>  Wrap text to <width> columns.
   help           Show this message.
 EOF
 }
@@ -108,6 +109,11 @@ case "$cmd" in
         ;;
     nospace)
         printf '%s\n' "$*" | tr -s '[:space:]' ' ' | sed -e 's/ $//'
+        ;;
+    wrap)
+        width="${1:-80}"
+        if [ $# -gt 0 ]; then shift; fi
+        printf '%s\n' "$*" | fold -s -w "$width"
         ;;
     help | -h | --help)
         usage

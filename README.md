@@ -33,6 +33,7 @@ dependencies beyond a POSIX shell.
 | `strip <chars> <text>` | Delete the given characters from the text |
 | `title <text>` | Capitalize the first letter of each word |
 | `nospace <text>` | Collapse whitespace runs into single spaces |
+| `wrap <width> <text>` | Wrap text to `<width>` columns |
 | `help` | Show usage |
 
 ## Development

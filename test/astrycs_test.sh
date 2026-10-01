@@ -41,6 +41,9 @@ check "title capitalizes each word" "Hello World" "$(./bin/astrycs title 'hello 
 
 check "nospace collapses whitespace runs" "a b" "$(./bin/astrycs nospace 'a     b')"
 
+check "wrap breaks long lines" "aaa
+bbb" "$(./bin/astrycs wrap 3 aaabbb)"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
