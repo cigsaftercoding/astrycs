@@ -92,6 +92,11 @@ check "empty input is handled by slug" "" "$(./bin/astrycs slug '')"
 
 check "help lists the commands" "yes" "$(./bin/astrycs help | grep -q "repeat" && echo yes)"
 
+check "starts-with detects a prefix" "yes" "$(./bin/astrycs starts-with he hello)"
+
+check "starts-with rejects a wrong prefix" "no" "$(./bin/astrycs starts-with xx hello)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

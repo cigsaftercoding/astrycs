@@ -56,6 +56,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `capitalize <text>` | Upper-case the first letter only |
 | `swapcase <text>` | Swap the case of every letter |
 | `initials <text>` | Extract the initials of each word |
+| `starts-with <prefix> <text>` | Test a prefix |
 | `help` | Show usage |
 
 ## Exit codes
