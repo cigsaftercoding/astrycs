@@ -37,6 +37,7 @@ dependencies beyond a POSIX shell.
 | `indent <n> <text>` | Indent every line by `<n>` spaces |
 | `words <text>` | Count the words in the text |
 | `lines <text>` | Count the lines in the text |
+| `head <n> <text>` | Print only the first `<n>` lines |
 | `help` | Show usage |
 
 ## Development

@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- `head` command for taking the first lines.
 - `lines` command for counting lines.
 - `words` command for counting words.
 - `indent` command for indenting text.
