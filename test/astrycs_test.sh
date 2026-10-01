@@ -78,6 +78,8 @@ check "kebab joins words with dashes" "hello-world" "$(./bin/astrycs kebab 'Hell
 
 check "snake joins words with underscores" "hello_world" "$(./bin/astrycs snake 'Hello World')"
 
+check "capitalize only touches the first letter" "Hello world" "$(./bin/astrycs capitalize 'hello WORLD')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
