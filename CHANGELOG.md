@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- `center` command.
 - `pluralize` command.
 - `ordinal` command.
 - `odd` command.

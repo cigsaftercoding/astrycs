@@ -62,6 +62,7 @@ Examples:
   odd <n>  Report whether a number is odd.
   ordinal <n>  Render a number as an ordinal (1st, 2nd, 3rd).
   pluralize <count> <singular> [plural]  Pick the right plural form.
+  center <width> <text>  Center text within a width.
   help           Show this message.
 EOF
 }
@@ -430,6 +431,23 @@ case "$cmd" in
         else
             printf '%s %s\n' "$count" "$plural"
         fi
+        ;;
+    center)
+        width="${1:-40}"
+        if [ $# -gt 0 ]; then shift; fi
+        t="$*"
+        len=${#t}
+        if [ "$len" -ge "$width" ]; then
+            printf '%s\n' "$t"
+            exit 0
+        fi
+        left=$(((width - len) / 2))
+        i=0
+        while [ "$i" -lt "$left" ]; do
+            printf ' '
+            i=$((i + 1))
+        done
+        printf '%s\n' "$t"
         ;;
     help | -h | --help)
         usage

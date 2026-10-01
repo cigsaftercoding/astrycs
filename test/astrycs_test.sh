@@ -184,6 +184,9 @@ check "pluralize uses the singular for one" "1 file" "$(./bin/astrycs pluralize 
 check "pluralize uses the plural otherwise" "2 files" "$(./bin/astrycs pluralize 2 file)"
 
 
+check "center pads on the left" "  hi" "$(./bin/astrycs center 6 hi)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

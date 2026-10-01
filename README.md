@@ -77,6 +77,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `odd <n>` | Report whether a number is odd |
 | `ordinal <n>` | Render a number as an ordinal (1st, 2nd, 3rd) |
 | `pluralize <count> <singular> [plural]` | Pick the right plural form |
+| `center <width> <text>` | Center text within a width |
 | `help` | Show usage |
 
 ## Exit codes
