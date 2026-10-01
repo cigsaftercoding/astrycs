@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- `csv-join` command for joining arguments as csv cells.
 - `sortlines` command for sorting lines.
 - `unique` command for sorting and deduplicating lines.
 - `tail` command for taking the last lines.
