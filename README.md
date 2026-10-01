@@ -52,6 +52,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `replace <find> <with> <text>` | Replace every occurrence of `<find>` |
 | `camel <text>` | Convert text to camelCase |
 | `kebab <text>` | Convert text to kebab-case |
+| `snake <text>` | Convert text to snake_case |
 | `help` | Show usage |
 
 ## Exit codes
