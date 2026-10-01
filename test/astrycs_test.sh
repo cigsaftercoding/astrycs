@@ -144,6 +144,9 @@ check "reverse-words flips the word order" "c b a" "$(./bin/astrycs reverse-word
 check "unique-words sorts and dedupes" "a
 b" "$(./bin/astrycs unique-words 'b a b')" 
 
+check "count-char counts occurrences" "2" "$(./bin/astrycs count-char l hello)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
