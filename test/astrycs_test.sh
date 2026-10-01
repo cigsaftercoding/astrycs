@@ -139,6 +139,8 @@ check "take keeps the leading words" "a b" "$(./bin/astrycs take 2 'a b c')"
 
 check "drop discards the leading words" "c" "$(./bin/astrycs drop 2 'a b c')"
 
+check "reverse-words flips the word order" "c b a" "$(./bin/astrycs reverse-words 'a b c')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

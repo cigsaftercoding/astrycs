@@ -50,6 +50,7 @@ Examples:
   default <fallback> <text>  Fall back when the text is empty.
   take <n> <text>  Keep the first <n> words.
   drop <n> <text>  Discard the first <n> words.
+  reverse-words <text>  Reverse the order of the words.
   help           Show this message.
 EOF
 }
@@ -334,6 +335,16 @@ case "$cmd" in
         printf '%s\n' "$*" | awk -v n="$n" '{
             out = ""
             for (i = n + 1; i <= NF; i++) {
+                if (out != "") out = out " "
+                out = out $i
+            }
+            print out
+        }'
+        ;;
+    reverse-words)
+        printf '%s\n' "$*" | awk '{
+            out = ""
+            for (i = NF; i >= 1; i--) {
                 if (out != "") out = out " "
                 out = out $i
             }
