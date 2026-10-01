@@ -38,6 +38,7 @@ Commands:
   initials <text>  Extract the initials of each word.
   starts-with <prefix> <text>  Test a prefix.
   ends-with <suffix> <text>  Test a suffix.
+  contains <needle> <text>  Test for a substring.
   help           Show this message.
 EOF
 }
@@ -263,6 +264,14 @@ case "$cmd" in
         if [ $# -gt 0 ]; then shift; fi
         case "$*" in
             *"$suffix") printf 'yes\n' ;;
+            *) printf 'no\n' ;;
+        esac
+        ;;
+    contains)
+        needle="${1:-}"
+        if [ $# -gt 0 ]; then shift; fi
+        case "$*" in
+            *"$needle"*) printf 'yes\n' ;;
             *) printf 'no\n' ;;
         esac
         ;;

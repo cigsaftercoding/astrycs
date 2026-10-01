@@ -112,6 +112,11 @@ check "reverse reverses each line independently" "a
 bb
 ccc" "$(./bin/astrycs reverse "$(printf 'a\nbb\nccc')")"
 
+check "contains finds a substring" "yes" "$(./bin/astrycs contains ell hello)"
+
+check "contains rejects a missing substring" "no" "$(./bin/astrycs contains zzz hello)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
