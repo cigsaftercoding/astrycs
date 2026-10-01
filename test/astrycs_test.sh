@@ -90,6 +90,8 @@ check "empty input is handled by reverse" "" "$(./bin/astrycs reverse '')"
 
 check "empty input is handled by slug" "" "$(./bin/astrycs slug '')"
 
+check "help lists the commands" "yes" "$(./bin/astrycs help | grep -q "repeat" && echo yes)"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
