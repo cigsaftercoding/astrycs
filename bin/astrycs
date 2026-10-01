@@ -69,6 +69,7 @@ Examples:
   urlencode <text>  Percent-encode reserved characters.
   number-lines <text>  Prefix each line with its number.
   bullet [marker] <text>  Prefix each line with a bullet.
+  dedent <text>  Strip leading whitespace from every line.
   help           Show this message.
 EOF
 }
@@ -509,6 +510,9 @@ case "$cmd" in
         marker="${1:-- }"
         if [ $# -gt 0 ]; then shift; fi
         printf '%s\n' "$*" | sed -e "s|^|${marker}|"
+        ;;
+    dedent)
+        printf '%s\n' "$*" | sed -e 's/^[[:space:]]*//'
         ;;
     help | -h | --help)
         usage
