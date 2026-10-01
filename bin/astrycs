@@ -11,6 +11,7 @@ Commands:
   upper <text>   Print text in upper case.
   repeat N TEXT  Print TEXT N times.
   lower <text>   Print text in lower case.
+  len <text>    Print the length of the text.
   help           Show this message.
 EOF
 }
@@ -36,6 +37,10 @@ case "$cmd" in
         ;;
     lower)
         printf '%s\n' "$*" | tr '[:upper:]' '[:lower:]'
+        ;;
+    len)
+        t="$*"
+        printf '%s\n' "${#t}"
         ;;
     help | -h | --help)
         usage

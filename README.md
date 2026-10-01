@@ -24,6 +24,7 @@ dependencies beyond a POSIX shell.
 | `upper <text>` | Upper-case the given text |
 | `repeat N TEXT` | Repeat `TEXT` `N` times |
 | `lower <text>` | Lower-case the given text |
+| `len <text>` | Print the length of the text |
 | `help` | Show usage |
 
 ## Development
