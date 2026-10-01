@@ -52,6 +52,9 @@ check "lines counts lines" "2" "$(./bin/astrycs lines 'a
 b')"
 check "lines reports zero for empty text" "0" "$(./bin/astrycs lines '')"
 
+check "head keeps the first lines" "a" "$(./bin/astrycs head 1 'a
+b')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
