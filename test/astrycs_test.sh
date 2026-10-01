@@ -159,6 +159,11 @@ check "min finds the smallest" "3" "$(./bin/astrycs min 3 9 5)"
 check "abs drops the sign" "5" "$(./bin/astrycs abs -5)"
 
 
+check "round rounds up" "3" "$(./bin/astrycs round 2.6)"
+
+check "round rounds down" "2" "$(./bin/astrycs round 2.4)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

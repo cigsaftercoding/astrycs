@@ -57,6 +57,7 @@ Examples:
   max [numbers...]  Print the largest number.
   min [numbers...]  Print the smallest number.
   abs <n>  Print the absolute value of a number.
+  round <n>  Round a number to the nearest integer.
   help           Show this message.
 EOF
 }
@@ -391,6 +392,12 @@ case "$cmd" in
         ;;
     abs)
         printf '%s\n' "$*" | awk '{ print ($1 < 0 ? -$1 : $1) }'
+        ;;
+    round)
+        printf '%s\n' "$*" | awk '{
+            if ($1 < 0) printf "%d\n", -int(-$1 + 0.5)
+            else printf "%d\n", int($1 + 0.5)
+        }'
         ;;
     help | -h | --help)
         usage
