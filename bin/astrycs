@@ -50,7 +50,7 @@ EOF
 }
 
 cmd="${1:-help}"
-[ $# -gt 0 ] && shift
+if [ $# -gt 0 ]; then shift; fi
 
 case "$cmd" in
     echo)

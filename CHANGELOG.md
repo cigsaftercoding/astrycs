@@ -63,5 +63,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - shellcheck lint step in CI.
 
 ### Fixed
+- Tidy the argument shift.
 - Program name on error output.
 - Explicit zero exit for `help`.
