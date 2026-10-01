@@ -147,6 +147,9 @@ b" "$(./bin/astrycs unique-words 'b a b')"
 check "count-char counts occurrences" "2" "$(./bin/astrycs count-char l hello)"
 
 
+check "sum adds the numbers" "6" "$(./bin/astrycs sum 1 2 3)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
