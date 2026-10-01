@@ -53,6 +53,10 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `camel <text>` | Convert text to camelCase |
 | `help` | Show usage |
 
+## Exit codes
+
+`0` on success, `1` for an unknown command or a usage error.
+
 ## Development
 
 ```sh
