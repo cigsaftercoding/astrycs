@@ -74,6 +74,8 @@ check "replace passes text through when find is empty" "hello" "$(./bin/astrycs 
 
 check "camel joins words in camelCase" "helloWorld" "$(./bin/astrycs camel 'hello world')"
 
+check "kebab joins words with dashes" "hello-world" "$(./bin/astrycs kebab 'Hello World')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

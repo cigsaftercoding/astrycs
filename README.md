@@ -51,6 +51,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `csv-join <sep> [text...]` | Join arguments as csv cells |
 | `replace <find> <with> <text>` | Replace every occurrence of `<find>` |
 | `camel <text>` | Convert text to camelCase |
+| `kebab <text>` | Convert text to kebab-case |
 | `help` | Show usage |
 
 ## Exit codes
