@@ -44,6 +44,8 @@ check "nospace collapses whitespace runs" "a b" "$(./bin/astrycs nospace 'a     
 check "wrap breaks long lines" "aaa
 bbb" "$(./bin/astrycs wrap 3 aaabbb)"
 
+check "indent adds leading spaces" "    hi" "$(./bin/astrycs indent 4 hi)"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

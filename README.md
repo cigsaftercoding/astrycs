@@ -34,6 +34,7 @@ dependencies beyond a POSIX shell.
 | `title <text>` | Capitalize the first letter of each word |
 | `nospace <text>` | Collapse whitespace runs into single spaces |
 | `wrap <width> <text>` | Wrap text to `<width>` columns |
+| `indent <n> <text>` | Indent every line by `<n>` spaces |
 | `help` | Show usage |
 
 ## Development
