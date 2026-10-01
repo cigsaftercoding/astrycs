@@ -65,6 +65,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `default <fallback> <text>` | Fall back when the text is empty |
 | `take <n> <text>` | Keep the first `<n>` words |
 | `drop <n> <text>` | Discard the first `<n>` words |
+| `reverse-words <text>` | Reverse the order of the words |
 | `help` | Show usage |
 
 ## Exit codes
