@@ -34,6 +34,7 @@ Commands:
   kebab <text>   Convert text to kebab-case.
   snake <text>   Convert text to snake_case.
   capitalize <text>  Upper-case the first letter only.
+  swapcase <text>  Swap the case of every letter.
   help           Show this message.
 EOF
 }
@@ -224,6 +225,19 @@ case "$cmd" in
             s = $0
             if (length(s) == 0) { print ""; exit }
             print toupper(substr(s, 1, 1)) tolower(substr(s, 2))
+        }'
+        ;;
+    swapcase)
+        printf '%s\n' "$*" | awk '{
+            s = $0
+            out = ""
+            for (i = 1; i <= length(s); i++) {
+                c = substr(s, i, 1)
+                if (c ~ /[a-z]/) out = out toupper(c)
+                else if (c ~ /[A-Z]/) out = out tolower(c)
+                else out = out c
+            }
+            print out
         }'
         ;;
     help | -h | --help)
