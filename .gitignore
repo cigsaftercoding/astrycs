@@ -10,3 +10,7 @@ Thumbs.db
 # Build output
 dist/
 *.log
+
+# Test artefacts
+*.tmp
+coverage/
