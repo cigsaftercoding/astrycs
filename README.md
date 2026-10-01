@@ -82,6 +82,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `mask <keep> <text>` | Mask the middle of a string |
 | `squeeze <text>` | Collapse runs of repeated characters |
 | `urlencode <text>` | Percent-encode reserved characters |
+| `number-lines <text>` | Prefix each line with its number |
 | `help` | Show usage |
 
 ## Exit codes

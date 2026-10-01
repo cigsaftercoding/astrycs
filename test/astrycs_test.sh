@@ -200,6 +200,10 @@ check "squeeze collapses repeats" "aba" "$(./bin/astrycs squeeze aaabba)"
 
 check "urlencode escapes spaces and symbols" "a%20b%3Fc" "$(./bin/astrycs urlencode 'a b?c')"
 
+check "number-lines numbers each line" "1. a
+2. b" "$(./bin/astrycs number-lines "$(printf 'a
+b')")" 
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

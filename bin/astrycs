@@ -67,6 +67,7 @@ Examples:
   mask <keep> <text>  Mask the middle of a string.
   squeeze <text>  Collapse runs of repeated characters.
   urlencode <text>  Percent-encode reserved characters.
+  number-lines <text>  Prefix each line with its number.
   help           Show this message.
 EOF
 }
@@ -499,6 +500,9 @@ case "$cmd" in
     urlencode)
         printf '%s\n' "$*" | sed -e 's/ /%20/g' -e 's/?/%3F/g' -e 's/&/%26/g' \
             -e 's/=/%3D/g' -e 's/#/%23/g' -e 's/+/%2B/g'
+        ;;
+    number-lines)
+        printf '%s\n' "$*" | awk '{ printf "%d. %s\n", NR, $0 }'
         ;;
     help | -h | --help)
         usage
