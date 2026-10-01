@@ -26,6 +26,7 @@ Commands:
   lines <text>   Count the lines in the text.
   head <n> <text>  Print only the first <n> lines.
   tail <n> <text>  Print only the last <n> lines.
+  unique <text>  Sort the lines and drop duplicates.
   help           Show this message.
 EOF
 }
@@ -150,6 +151,9 @@ case "$cmd" in
         n="${1:-1}"
         if [ $# -gt 0 ]; then shift; fi
         printf '%s\n' "$*" | tail -n "$n"
+        ;;
+    unique)
+        printf '%s\n' "$*" | sort -u
         ;;
     help | -h | --help)
         usage
