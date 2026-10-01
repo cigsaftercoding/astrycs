@@ -58,6 +58,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `initials <text>` | Extract the initials of each word |
 | `starts-with <prefix> <text>` | Test a prefix |
 | `ends-with <suffix> <text>` | Test a suffix |
+| `contains <needle> <text>` | Test for a substring |
 | `help` | Show usage |
 
 ## Exit codes
