@@ -55,6 +55,7 @@ Examples:
   count-char <char> <text>  Count occurrences of a character.
   sum [numbers...]  Add the given numbers.
   max [numbers...]  Print the largest number.
+  min [numbers...]  Print the smallest number.
   help           Show this message.
 EOF
 }
@@ -376,6 +377,14 @@ case "$cmd" in
             if (!seen || $1 > m) m = $1
             seen = 1
             for (i = 2; i <= NF; i++) if ($i > m) m = $i
+        }
+        END { if (seen) print m }'
+        ;;
+    min)
+        printf '%s\n' "$*" | awk 'NF {
+            if (!seen || $1 < m) m = $1
+            seen = 1
+            for (i = 2; i <= NF; i++) if ($i < m) m = $i
         }
         END { if (seen) print m }'
         ;;
