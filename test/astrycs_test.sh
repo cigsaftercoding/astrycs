@@ -97,6 +97,8 @@ check "starts-with detects a prefix" "yes" "$(./bin/astrycs starts-with he hello
 check "starts-with rejects a wrong prefix" "no" "$(./bin/astrycs starts-with xx hello)"
 
 
+check "unknown command fails" "1" "$(./bin/astrycs nope-nope >/dev/null 2>&1 || echo $?)"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
