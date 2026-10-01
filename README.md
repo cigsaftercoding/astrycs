@@ -79,6 +79,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `pluralize <count> <singular> [plural]` | Pick the right plural form |
 | `center <width> <text>` | Center text within a width |
 | `truncate <width> <text>` | Shorten text to a width |
+| `mask <keep> <text>` | Mask the middle of a string |
 | `help` | Show usage |
 
 ## Exit codes
