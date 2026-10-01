@@ -45,6 +45,7 @@ Examples:
   $ astrycs pad 10 total
   $ astrycs title "hello world"
 
+  is-number <text>  Report whether the text is numeric.
   help           Show this message.
 EOF
 }
@@ -283,6 +284,12 @@ case "$cmd" in
         ;;
     is-empty)
         if [ -z "$*" ]; then printf 'yes\n'; else printf 'no\n'; fi
+        ;;
+    is-number)
+        case "$*" in
+            ''|*[!0-9.-]*) printf 'no\n' ;;
+            *) printf 'yes\n' ;;
+        esac
         ;;
     help | -h | --help)
         usage

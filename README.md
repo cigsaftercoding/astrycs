@@ -60,6 +60,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `ends-with <suffix> <text>` | Test a suffix |
 | `contains <needle> <text>` | Test for a substring |
 | `is-empty <text>` | Report whether the text is empty |
+| `is-number <text>` | Report whether the text is numeric |
 | `help` | Show usage |
 
 ## Exit codes

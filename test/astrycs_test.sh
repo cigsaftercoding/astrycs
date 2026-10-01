@@ -122,6 +122,11 @@ check "is-empty detects empty text" "yes" "$(./bin/astrycs is-empty '')"
 check "is-empty rejects real text" "no" "$(./bin/astrycs is-empty x)"
 
 
+check "is-number accepts digits" "yes" "$(./bin/astrycs is-number 1234)"
+
+check "is-number rejects letters" "no" "$(./bin/astrycs is-number 12a)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
