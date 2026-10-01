@@ -280,7 +280,7 @@ case "$cmd" in
         exit 0
         ;;
     *)
-        printf 'unknown command: %s\n' "$cmd" >&2
+        printf 'astrycs: unknown command: %s\n' "$cmd" >&2
         usage >&2
         exit 1
         ;;
