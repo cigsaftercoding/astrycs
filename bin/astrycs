@@ -61,6 +61,7 @@ Examples:
   even <n>  Report whether a number is even.
   odd <n>  Report whether a number is odd.
   ordinal <n>  Render a number as an ordinal (1st, 2nd, 3rd).
+  pluralize <count> <singular> [plural]  Pick the right plural form.
   help           Show this message.
 EOF
 }
@@ -417,6 +418,18 @@ case "$cmd" in
             else if (n % 10 == 3) print n "rd"
             else print n "th"
         }'
+        ;;
+    pluralize)
+        count="${1:-1}"
+        if [ $# -gt 0 ]; then shift; fi
+        singular="${1:-}"
+        if [ $# -gt 0 ]; then shift; fi
+        plural="${1:-${singular}s}"
+        if [ "$count" -eq 1 ]; then
+            printf '%s %s\n' "$count" "$singular"
+        else
+            printf '%s %s\n' "$count" "$plural"
+        fi
         ;;
     help | -h | --help)
         usage

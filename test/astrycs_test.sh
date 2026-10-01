@@ -179,6 +179,11 @@ check "ordinal handles second" "2nd" "$(./bin/astrycs ordinal 2)"
 check "ordinal handles teens" "11th" "$(./bin/astrycs ordinal 11)"
 
 
+check "pluralize uses the singular for one" "1 file" "$(./bin/astrycs pluralize 1 file)"
+
+check "pluralize uses the plural otherwise" "2 files" "$(./bin/astrycs pluralize 2 file)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
