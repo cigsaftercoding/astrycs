@@ -63,6 +63,7 @@ Examples:
   ordinal <n>  Render a number as an ordinal (1st, 2nd, 3rd).
   pluralize <count> <singular> [plural]  Pick the right plural form.
   center <width> <text>  Center text within a width.
+  truncate <width> <text>  Shorten text to a width.
   help           Show this message.
 EOF
 }
@@ -448,6 +449,16 @@ case "$cmd" in
             i=$((i + 1))
         done
         printf '%s\n' "$t"
+        ;;
+    truncate)
+        width="${1:-80}"
+        if [ $# -gt 0 ]; then shift; fi
+        t="$*"
+        if [ "${#t}" -le "$width" ]; then
+            printf '%s\n' "$t"
+            exit 0
+        fi
+        printf '%s...\n' "$(printf '%s' "$t" | cut -c1-"$width")"
         ;;
     help | -h | --help)
         usage

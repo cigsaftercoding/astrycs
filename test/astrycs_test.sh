@@ -187,6 +187,11 @@ check "pluralize uses the plural otherwise" "2 files" "$(./bin/astrycs pluralize
 check "center pads on the left" "  hi" "$(./bin/astrycs center 6 hi)"
 
 
+check "truncate shortens long text" "hel..." "$(./bin/astrycs truncate 3 hello)"
+
+check "truncate leaves short text alone" "hi" "$(./bin/astrycs truncate 8 hi)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
