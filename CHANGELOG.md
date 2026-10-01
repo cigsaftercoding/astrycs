@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-10-01
+
+Everything that had accumulated under `Unreleased` to date: the text, numeric,
+predicate and line helpers documented in the readme, plus the test harness and
+CI that cover them.
+
 ### Added
 - `yesno` command.
 - `chunk` command.
