@@ -43,6 +43,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - `nospace` command for collapsing whitespace.
 
 ### Changed
+- editorconfig rules for yaml.
 - Test artefacts in .gitignore.
 - Least-privilege workflow permissions.
 - dash job in CI to catch bashisms.
