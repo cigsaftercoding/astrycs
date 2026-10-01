@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- `squeeze` command.
 - `mask` command.
 - `truncate` command.
 - `center` command.
