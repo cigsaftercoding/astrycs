@@ -55,6 +55,9 @@ check "lines reports zero for empty text" "0" "$(./bin/astrycs lines '')"
 check "head keeps the first lines" "a" "$(./bin/astrycs head 1 'a
 b')"
 
+check "tail keeps the last lines" "b" "$(./bin/astrycs tail 1 'a
+b')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

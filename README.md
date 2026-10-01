@@ -38,6 +38,7 @@ dependencies beyond a POSIX shell.
 | `words <text>` | Count the words in the text |
 | `lines <text>` | Count the lines in the text |
 | `head <n> <text>` | Print only the first `<n>` lines |
+| `tail <n> <text>` | Print only the last `<n>` lines |
 | `help` | Show usage |
 
 ## Development
