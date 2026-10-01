@@ -40,6 +40,11 @@ Commands:
   ends-with <suffix> <text>  Test a suffix.
   contains <needle> <text>  Test for a substring.
   is-empty <text>  Report whether the text is empty.
+Examples:
+  $ astrycs slug "Hello, World!"
+  $ astrycs pad 10 total
+  $ astrycs title "hello world"
+
   help           Show this message.
 EOF
 }

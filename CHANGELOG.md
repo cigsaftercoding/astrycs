@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- Examples in the built-in help text.
 - `is-empty` command.
 - `contains` command.
 - `ends-with` command.
