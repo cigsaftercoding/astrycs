@@ -10,6 +10,7 @@ Commands:
   echo <text>    Print text back.
   upper <text>   Print text in upper case.
   repeat N TEXT  Print TEXT N times.
+  lower <text>   Print text in lower case.
   help           Show this message.
 EOF
 }
@@ -32,6 +33,9 @@ case "$cmd" in
             printf '%s\n' "$*"
             i=$((i + 1))
         done
+        ;;
+    lower)
+        printf '%s\n' "$*" | tr '[:upper:]' '[:lower:]'
         ;;
     help | -h | --help)
         usage
