@@ -26,6 +26,18 @@ Co-authored-by: Name <email@example.com>
 One pull request per change. Bug fixes and features land separately,
 and each pull request should keep its tests green on its own.
 
+## Adding a command
+
+A subcommand needs wiring in five places, in this order:
+
+1. `bin/astrycs` — a line in the `usage` block, for discoverability
+2. `bin/astrycs` — a branch in the `case` statement
+3. `test/astrycs_test.sh` — at least one `check`, including empty input
+4. `README.md` — a row in the command table
+5. `CHANGELOG.md` — a bullet under the unreleased section
+
+Run `sh test/astrycs_test.sh` before opening the pull request.
+
 ## Checks
 
 ```sh
