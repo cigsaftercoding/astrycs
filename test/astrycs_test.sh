@@ -46,6 +46,8 @@ bbb" "$(./bin/astrycs wrap 3 aaabbb)"
 
 check "indent adds leading spaces" "    hi" "$(./bin/astrycs indent 4 hi)"
 
+check "words counts whitespace-separated words" "3" "$(./bin/astrycs words 'a b c')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

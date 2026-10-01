@@ -35,6 +35,7 @@ dependencies beyond a POSIX shell.
 | `nospace <text>` | Collapse whitespace runs into single spaces |
 | `wrap <width> <text>` | Wrap text to `<width>` columns |
 | `indent <n> <text>` | Indent every line by `<n>` spaces |
+| `words <text>` | Count the words in the text |
 | `help` | Show usage |
 
 ## Development
