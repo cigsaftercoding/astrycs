@@ -35,6 +35,7 @@ Commands:
   snake <text>   Convert text to snake_case.
   capitalize <text>  Upper-case the first letter only.
   swapcase <text>  Swap the case of every letter.
+  initials <text>  Extract the initials of each word.
   help           Show this message.
 EOF
 }
@@ -237,6 +238,13 @@ case "$cmd" in
                 else if (c ~ /[A-Z]/) out = out tolower(c)
                 else out = out c
             }
+            print out
+        }'
+        ;;
+    initials)
+        printf '%s\n' "$*" | awk '{
+            out = ""
+            for (i = 1; i <= NF; i++) out = out toupper(substr($i, 1, 1))
             print out
         }'
         ;;

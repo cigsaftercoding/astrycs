@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- `initials` command.
 - `swapcase` command.
 - `capitalize` command.
 - `snake` command for snake_case conversion.
