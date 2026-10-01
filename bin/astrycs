@@ -12,6 +12,7 @@ Commands:
   repeat N TEXT  Print TEXT N times.
   lower <text>   Print text in lower case.
   len <text>    Print the length of the text.
+  trim <text>   Trim surrounding whitespace.
   help           Show this message.
 EOF
 }
@@ -41,6 +42,12 @@ case "$cmd" in
     len)
         t="$*"
         printf '%s\n' "${#t}"
+        ;;
+    trim)
+        t="$*"
+        t="${t#"${t%%[![:space:]]*}"}"
+        t="${t%"${t##*[![:space:]]}"}"
+        printf '%s\n' "$t"
         ;;
     help | -h | --help)
         usage

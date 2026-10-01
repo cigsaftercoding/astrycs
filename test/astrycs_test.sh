@@ -25,6 +25,8 @@ check "lower downcases text" "hello" "$(./bin/astrycs lower HELLO)"
 
 check "len counts characters" "5" "$(./bin/astrycs len hello)"
 
+check "trim strips surrounding space" "hello" "$(./bin/astrycs trim '   hello   ')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

@@ -12,3 +12,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - Project documentation, license, and contribution guide.
 - `lower` command for lower-casing text.
 - `len` command for measuring text length.
+- `trim` command for stripping surrounding whitespace.
