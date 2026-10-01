@@ -70,6 +70,7 @@ Examples:
   number-lines <text>  Prefix each line with its number.
   bullet [marker] <text>  Prefix each line with a bullet.
   dedent <text>  Strip leading whitespace from every line.
+  indent-right <n> <text>  Indent every line on the right.
   help           Show this message.
 EOF
 }
@@ -513,6 +514,17 @@ case "$cmd" in
         ;;
     dedent)
         printf '%s\n' "$*" | sed -e 's/^[[:space:]]*//'
+        ;;
+    indent-right)
+        n="${1:-2}"
+        if [ $# -gt 0 ]; then shift; fi
+        pad=""
+        i=0
+        while [ "$i" -lt "$n" ]; do
+            pad="${pad} "
+            i=$((i + 1))
+        done
+        printf '%s\n' "$*" | awk -v p="$pad" '{ print $0 p }'
         ;;
     help | -h | --help)
         usage
