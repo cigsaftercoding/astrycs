@@ -23,4 +23,9 @@ jobs:
       - name: Run tests under dash
         run: dash test/astrycs_test.sh
       - name: Lint
-        run: shellcheck bin/astrycs test/astrycs_test.sh
+        run: |
+          if ! command -v shellcheck >/dev/null 2>&1; then
+            echo "shellcheck not present on this runner; installing"
+            brew install shellcheck
+          fi
+          shellcheck bin/astrycs test/astrycs_test.sh
