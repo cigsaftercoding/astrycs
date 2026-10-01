@@ -75,6 +75,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `round <n>` | Round a number to the nearest integer |
 | `even <n>` | Report whether a number is even |
 | `odd <n>` | Report whether a number is odd |
+| `ordinal <n>` | Render a number as an ordinal (1st, 2nd, 3rd) |
 | `help` | Show usage |
 
 ## Exit codes

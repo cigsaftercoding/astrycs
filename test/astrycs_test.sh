@@ -172,6 +172,13 @@ check "even rejects odd numbers" "no" "$(./bin/astrycs even 5)"
 check "odd accepts odd numbers" "yes" "$(./bin/astrycs odd 5)"
 
 
+check "ordinal handles first" "1st" "$(./bin/astrycs ordinal 1)"
+
+check "ordinal handles second" "2nd" "$(./bin/astrycs ordinal 2)"
+
+check "ordinal handles teens" "11th" "$(./bin/astrycs ordinal 11)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
