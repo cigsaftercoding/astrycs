@@ -84,6 +84,12 @@ check "swapcase inverts each letter" "hELLO" "$(./bin/astrycs swapcase Hello)"
 
 check "initials takes the first letter of each word" "JD" "$(./bin/astrycs initials 'john doe')"
 
+check "empty input is handled by upper" "" "$(./bin/astrycs upper '')"
+
+check "empty input is handled by reverse" "" "$(./bin/astrycs reverse '')"
+
+check "empty input is handled by slug" "" "$(./bin/astrycs slug '')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

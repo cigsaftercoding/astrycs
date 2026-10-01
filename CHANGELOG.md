@@ -44,6 +44,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - `nospace` command for collapsing whitespace.
 
 ### Changed
+- Regression tests for empty input.
 - editorconfig rules for yaml.
 - Test artefacts in .gitignore.
 - Least-privilege workflow permissions.
