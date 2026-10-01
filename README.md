@@ -50,6 +50,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `sortlines <text>` | Sort the lines alphabetically |
 | `csv-join <sep> [text...]` | Join arguments as csv cells |
 | `replace <find> <with> <text>` | Replace every occurrence of `<find>` |
+| `camel <text>` | Convert text to camelCase |
 | `help` | Show usage |
 
 ## Development

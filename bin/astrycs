@@ -30,6 +30,7 @@ Commands:
   sortlines <text>  Sort the lines alphabetically.
   csv-join <sep> [text...]  Join arguments as csv cells.
   replace <find> <with> <text>  Replace every occurrence of <find>.
+  camel <text>   Convert text to camelCase.
   help           Show this message.
 EOF
 }
@@ -183,6 +184,17 @@ case "$cmd" in
         else
             printf '%s\n' "$*" | sed -e "s|${find}|${with}|g"
         fi
+        ;;
+    camel)
+        printf '%s\n' "$*" | awk '{
+            out = ""
+            for (i = 1; i <= NF; i++) {
+                w = tolower($i)
+                if (i == 1) out = out w
+                else out = out toupper(substr(w, 1, 1)) substr(w, 2)
+            }
+            print out
+        }'
         ;;
     help | -h | --help)
         usage
