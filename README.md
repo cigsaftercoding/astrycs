@@ -86,6 +86,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `bullet [marker] <text>` | Prefix each line with a bullet |
 | `dedent <text>` | Strip leading whitespace from every line |
 | `indent-right <n> <text>` | Indent every line on the right |
+| `chunk <size> <text>` | Break text into fixed-size chunks |
 | `help` | Show usage |
 
 ## Exit codes
