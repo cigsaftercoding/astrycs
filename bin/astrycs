@@ -36,6 +36,7 @@ Commands:
   capitalize <text>  Upper-case the first letter only.
   swapcase <text>  Swap the case of every letter.
   initials <text>  Extract the initials of each word.
+  starts-with <prefix> <text>  Test a prefix.
   help           Show this message.
 EOF
 }
@@ -247,6 +248,14 @@ case "$cmd" in
             for (i = 1; i <= NF; i++) out = out toupper(substr($i, 1, 1))
             print out
         }'
+        ;;
+    starts-with)
+        prefix="${1:-}"
+        if [ $# -gt 0 ]; then shift; fi
+        case "$*" in
+            "$prefix"*) printf 'yes\n' ;;
+            *) printf 'no\n' ;;
+        esac
         ;;
     help | -h | --help)
         usage
