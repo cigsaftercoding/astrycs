@@ -42,6 +42,7 @@ dependencies beyond a POSIX shell.
 | `unique <text>` | Sort the lines and drop duplicates |
 | `sortlines <text>` | Sort the lines alphabetically |
 | `csv-join <sep> [text...]` | Join arguments as csv cells |
+| `replace <find> <with> <text>` | Replace every occurrence of `<find>` |
 | `help` | Show usage |
 
 ## Development

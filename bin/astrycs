@@ -29,6 +29,7 @@ Commands:
   unique <text>  Sort the lines and drop duplicates.
   sortlines <text>  Sort the lines alphabetically.
   csv-join <sep> [text...]  Join arguments as csv cells.
+  replace <find> <with> <text>  Replace every occurrence of <find>.
   help           Show this message.
 EOF
 }
@@ -172,6 +173,16 @@ case "$cmd" in
             if [ "$first" -eq 1 ]; then out="$cell"; first=0; else out="${out}${sep}${cell}"; fi
         done
         printf '%s\n' "$out"
+        ;;
+    replace)
+        find="${1:-}"
+        with="${2:-}"
+        if [ $# -ge 2 ]; then shift 2; else shift $#; fi
+        if [ -z "$find" ]; then
+            printf '%s\n' "$*"
+        else
+            printf '%s\n' "$*" | sed -e "s|${find}|${with}|g"
+        fi
         ;;
     help | -h | --help)
         usage
