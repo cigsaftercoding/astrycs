@@ -39,6 +39,7 @@ dependencies beyond a POSIX shell.
 | `lines <text>` | Count the lines in the text |
 | `head <n> <text>` | Print only the first `<n>` lines |
 | `tail <n> <text>` | Print only the last `<n>` lines |
+| `unique <text>` | Sort the lines and drop duplicates |
 | `help` | Show usage |
 
 ## Development

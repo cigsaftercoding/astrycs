@@ -58,6 +58,11 @@ b')"
 check "tail keeps the last lines" "b" "$(./bin/astrycs tail 1 'a
 b')"
 
+check "unique sorts and dedupes" "a
+b" "$(./bin/astrycs unique 'b
+a
+b')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
