@@ -71,6 +71,7 @@ Examples:
   bullet [marker] <text>  Prefix each line with a bullet.
   dedent <text>  Strip leading whitespace from every line.
   indent-right <n> <text>  Indent every line on the right.
+  chunk <size> <text>  Break text into fixed-size chunks.
   help           Show this message.
 EOF
 }
@@ -525,6 +526,11 @@ case "$cmd" in
             i=$((i + 1))
         done
         printf '%s\n' "$*" | awk -v p="$pad" '{ print $0 p }'
+        ;;
+    chunk)
+        n="${1:-2}"
+        if [ $# -gt 0 ]; then shift; fi
+        printf '%s' "$*" | fold -w "$n"
         ;;
     help | -h | --help)
         usage

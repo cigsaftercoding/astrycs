@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- `chunk` command.
 - `indent-right` command.
 - `dedent` command.
 - `bullet` command.
