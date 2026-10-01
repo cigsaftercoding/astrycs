@@ -76,6 +76,8 @@ check "camel joins words in camelCase" "helloWorld" "$(./bin/astrycs camel 'hell
 
 check "kebab joins words with dashes" "hello-world" "$(./bin/astrycs kebab 'Hello World')"
 
+check "snake joins words with underscores" "hello_world" "$(./bin/astrycs snake 'Hello World')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
