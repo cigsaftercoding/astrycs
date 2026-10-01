@@ -192,6 +192,9 @@ check "truncate shortens long text" "hel..." "$(./bin/astrycs truncate 3 hello)"
 check "truncate leaves short text alone" "hi" "$(./bin/astrycs truncate 8 hi)"
 
 
+check "mask hides the middle" "h***o" "$(./bin/astrycs mask 1 hello)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
