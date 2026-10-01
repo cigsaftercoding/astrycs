@@ -69,6 +69,9 @@ a')"
 
 check "csv-join quotes cells containing the separator" '"a,b",c' "$(./bin/astrycs csv-join , 'a,b' c)"
 
+check "replace swaps every occurrence" "heXXo" "$(./bin/astrycs replace l X hello)"
+check "replace passes text through when find is empty" "hello" "$(./bin/astrycs replace "" X hello)"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
