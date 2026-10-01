@@ -72,6 +72,7 @@ Examples:
   dedent <text>  Strip leading whitespace from every line.
   indent-right <n> <text>  Indent every line on the right.
   chunk <size> <text>  Break text into fixed-size chunks.
+  yesno <text>  Normalise yes/no style answers.
   help           Show this message.
 EOF
 }
@@ -531,6 +532,12 @@ case "$cmd" in
         n="${1:-2}"
         if [ $# -gt 0 ]; then shift; fi
         printf '%s' "$*" | fold -w "$n"
+        ;;
+    yesno)
+        case "$(printf '%s' "$*" | tr '[:upper:]' '[:lower:]')" in
+            y|yes|true|1) printf 'yes\n' ;;
+            *) printf 'no\n' ;;
+        esac
         ;;
     help | -h | --help)
         usage

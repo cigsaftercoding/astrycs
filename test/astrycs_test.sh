@@ -218,6 +218,11 @@ check "indent-right pads to the requested width" "4" "$(./bin/astrycs len "$(./b
 check "chunk splits into fixed pieces" "ab
 cd" "$(./bin/astrycs chunk 2 abcd)" 
 
+check "yesno accepts y" "yes" "$(./bin/astrycs yesno y)"
+
+check "yesno rejects anything else" "no" "$(./bin/astrycs yesno maybe)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
