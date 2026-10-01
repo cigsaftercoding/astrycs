@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- Extra usage examples in the readme.
 - `replace` command for substring replacement.
 - `csv-join` command for joining arguments as csv cells.
 - `sortlines` command for sorting lines.
