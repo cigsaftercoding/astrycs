@@ -63,6 +63,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `is-number <text>` | Report whether the text is numeric |
 | `split <sep> <text>` | Split text on a separator, one per line |
 | `default <fallback> <text>` | Fall back when the text is empty |
+| `take <n> <text>` | Keep the first `<n>` words |
 | `help` | Show usage |
 
 ## Exit codes
