@@ -198,6 +198,8 @@ check "mask hides the middle" "h***o" "$(./bin/astrycs mask 1 hello)"
 check "squeeze collapses repeats" "aba" "$(./bin/astrycs squeeze aaabba)"
 
 
+check "urlencode escapes spaces and symbols" "a%20b%3Fc" "$(./bin/astrycs urlencode 'a b?c')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

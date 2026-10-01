@@ -81,6 +81,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `truncate <width> <text>` | Shorten text to a width |
 | `mask <keep> <text>` | Mask the middle of a string |
 | `squeeze <text>` | Collapse runs of repeated characters |
+| `urlencode <text>` | Percent-encode reserved characters |
 | `help` | Show usage |
 
 ## Exit codes
