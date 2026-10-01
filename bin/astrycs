@@ -19,6 +19,7 @@ Commands:
   reverse <text>  Reverse the text.
   strip <chars> <text>  Delete the given characters from the text.
   title <text>   Capitalize the first letter of each word.
+  nospace <text>  Collapse whitespace runs into single spaces.
   help           Show this message.
 EOF
 }
@@ -104,6 +105,9 @@ case "$cmd" in
                 $i = toupper(substr($i, 1, 1)) tolower(substr($i, 2))
             print
         }'
+        ;;
+    nospace)
+        printf '%s\n' "$*" | tr -s '[:space:]' ' ' | sed -e 's/ $//'
         ;;
     help | -h | --help)
         usage

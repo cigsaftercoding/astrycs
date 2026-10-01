@@ -32,6 +32,7 @@ dependencies beyond a POSIX shell.
 | `reverse <text>` | Reverse the text |
 | `strip <chars> <text>` | Delete the given characters from the text |
 | `title <text>` | Capitalize the first letter of each word |
+| `nospace <text>` | Collapse whitespace runs into single spaces |
 | `help` | Show usage |
 
 ## Development
