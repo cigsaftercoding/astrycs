@@ -10,3 +10,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - Test harness under `test/`.
 - Continuous integration workflow.
 - Project documentation, license, and contribution guide.
+- `lower` command for lower-casing text.
