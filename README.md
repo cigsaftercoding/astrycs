@@ -25,6 +25,7 @@ dependencies beyond a POSIX shell.
 | `repeat N TEXT` | Repeat `TEXT` `N` times |
 | `lower <text>` | Lower-case the given text |
 | `len <text>` | Print the length of the text |
+| `trim <text>` | Trim surrounding whitespace |
 | `help` | Show usage |
 
 ## Development
