@@ -60,6 +60,7 @@ Examples:
   round <n>  Round a number to the nearest integer.
   even <n>  Report whether a number is even.
   odd <n>  Report whether a number is odd.
+  ordinal <n>  Render a number as an ordinal (1st, 2nd, 3rd).
   help           Show this message.
 EOF
 }
@@ -406,6 +407,16 @@ case "$cmd" in
         ;;
     odd)
         printf '%s\n' "$*" | awk '{ print ($1 % 2 != 0 ? "yes" : "no") }'
+        ;;
+    ordinal)
+        printf '%s\n' "$*" | awk '{
+            n = $1
+            if (n % 100 >= 11 && n % 100 <= 13) { print n "th"; exit }
+            if (n % 10 == 1) print n "st"
+            else if (n % 10 == 2) print n "nd"
+            else if (n % 10 == 3) print n "rd"
+            else print n "th"
+        }'
         ;;
     help | -h | --help)
         usage
