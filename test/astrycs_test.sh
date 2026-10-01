@@ -127,6 +127,9 @@ check "is-number accepts digits" "yes" "$(./bin/astrycs is-number 1234)"
 check "is-number rejects letters" "no" "$(./bin/astrycs is-number 12a)"
 
 
+check "split prints one field per line" "a
+b" "$(./bin/astrycs split , 'a,b')" 
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

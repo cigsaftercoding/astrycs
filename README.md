@@ -61,6 +61,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `contains <needle> <text>` | Test for a substring |
 | `is-empty <text>` | Report whether the text is empty |
 | `is-number <text>` | Report whether the text is numeric |
+| `split <sep> <text>` | Split text on a separator, one per line |
 | `help` | Show usage |
 
 ## Exit codes
