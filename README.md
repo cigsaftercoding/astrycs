@@ -87,6 +87,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `dedent <text>` | Strip leading whitespace from every line |
 | `indent-right <n> <text>` | Indent every line on the right |
 | `chunk <size> <text>` | Break text into fixed-size chunks |
+| `yesno <text>` | Normalise yes/no style answers |
 | `help` | Show usage |
 
 ## Exit codes
