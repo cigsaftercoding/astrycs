@@ -53,6 +53,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `camel <text>` | Convert text to camelCase |
 | `kebab <text>` | Convert text to kebab-case |
 | `snake <text>` | Convert text to snake_case |
+| `capitalize <text>` | Upper-case the first letter only |
 | `help` | Show usage |
 
 ## Exit codes

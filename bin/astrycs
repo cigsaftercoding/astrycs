@@ -33,6 +33,7 @@ Commands:
   camel <text>   Convert text to camelCase.
   kebab <text>   Convert text to kebab-case.
   snake <text>   Convert text to snake_case.
+  capitalize <text>  Upper-case the first letter only.
   help           Show this message.
 EOF
 }
@@ -216,6 +217,13 @@ case "$cmd" in
                 out = out tolower($i)
             }
             print out
+        }'
+        ;;
+    capitalize)
+        printf '%s\n' "$*" | awk '{
+            s = $0
+            if (length(s) == 0) { print ""; exit }
+            print toupper(substr(s, 1, 1)) tolower(substr(s, 2))
         }'
         ;;
     help | -h | --help)
