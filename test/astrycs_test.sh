@@ -37,6 +37,8 @@ check "reverse flips characters" "olleh" "$(./bin/astrycs reverse hello)"
 
 check "strip removes characters" "heo" "$(./bin/astrycs strip l hello)"
 
+check "title capitalizes each word" "Hello World" "$(./bin/astrycs title 'hello world')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

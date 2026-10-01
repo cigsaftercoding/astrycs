@@ -18,3 +18,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - `pad` command for fixed-width output.
 - `reverse` command for reversing text.
 - `strip` command for deleting characters.
+- `title` command for title-casing text.

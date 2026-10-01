@@ -31,6 +31,7 @@ dependencies beyond a POSIX shell.
 | `pad <width> <text>` | Left-pad text with spaces up to `<width>` |
 | `reverse <text>` | Reverse the text |
 | `strip <chars> <text>` | Delete the given characters from the text |
+| `title <text>` | Capitalize the first letter of each word |
 | `help` | Show usage |
 
 ## Development
