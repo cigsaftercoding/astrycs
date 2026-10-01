@@ -66,6 +66,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `take <n> <text>` | Keep the first `<n>` words |
 | `drop <n> <text>` | Discard the first `<n>` words |
 | `reverse-words <text>` | Reverse the order of the words |
+| `unique-words <text>` | Sort and deduplicate the words |
 | `help` | Show usage |
 
 ## Exit codes

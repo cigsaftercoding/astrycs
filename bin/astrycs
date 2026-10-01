@@ -51,6 +51,7 @@ Examples:
   take <n> <text>  Keep the first <n> words.
   drop <n> <text>  Discard the first <n> words.
   reverse-words <text>  Reverse the order of the words.
+  unique-words <text>  Sort and deduplicate the words.
   help           Show this message.
 EOF
 }
@@ -350,6 +351,9 @@ case "$cmd" in
             }
             print out
         }'
+        ;;
+    unique-words)
+        printf '%s\n' "$*" | tr -s '[:space:]' '\n' | sed '/^$/d' | sort -u
         ;;
     help | -h | --help)
         usage
