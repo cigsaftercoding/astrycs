@@ -1,0 +1,12 @@
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Editors
+*.swp
+.idea/
+.vscode/
+
+# Build output
+dist/
+*.log
