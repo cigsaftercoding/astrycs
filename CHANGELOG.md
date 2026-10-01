@@ -14,3 +14,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - `len` command for measuring text length.
 - `trim` command for stripping surrounding whitespace.
 - `join` command for joining arguments with a separator.
+- `slug` command for generating url slugs.

@@ -27,6 +27,7 @@ dependencies beyond a POSIX shell.
 | `len <text>` | Print the length of the text |
 | `trim <text>` | Trim surrounding whitespace |
 | `join <sep> [text...]` | Join the remaining arguments with `<sep>` |
+| `slug <text>` | Convert text into a url slug |
 | `help` | Show usage |
 
 ## Development
