@@ -204,6 +204,10 @@ check "number-lines numbers each line" "1. a
 2. b" "$(./bin/astrycs number-lines "$(printf 'a
 b')")" 
 
+check "bullet prefixes each line" "- a
+- b" "$(./bin/astrycs bullet '- ' "$(printf 'a\nb')")"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
