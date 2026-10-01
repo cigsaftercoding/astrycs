@@ -66,6 +66,7 @@ Examples:
   truncate <width> <text>  Shorten text to a width.
   mask <keep> <text>  Mask the middle of a string.
   squeeze <text>  Collapse runs of repeated characters.
+  urlencode <text>  Percent-encode reserved characters.
   help           Show this message.
 EOF
 }
@@ -494,6 +495,10 @@ case "$cmd" in
             }
             print out
         }'
+        ;;
+    urlencode)
+        printf '%s\n' "$*" | sed -e 's/ /%20/g' -e 's/?/%3F/g' -e 's/&/%26/g' \
+            -e 's/=/%3D/g' -e 's/#/%23/g' -e 's/+/%2B/g'
         ;;
     help | -h | --help)
         usage
