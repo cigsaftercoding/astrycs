@@ -42,6 +42,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - `nospace` command for collapsing whitespace.
 
 ### Changed
+- Least-privilege workflow permissions.
 - dash job in CI to catch bashisms.
 - CI matrix across ubuntu and macos.
 - shellcheck lint step in CI.
