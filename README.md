@@ -8,6 +8,11 @@ A tiny, dependency-free helper toolkit for the shell.
 re-writing the same one-liners in every script. It has no runtime
 dependencies beyond a POSIX shell.
 
+## Requirements
+
+A POSIX shell plus the usual text utilities (`awk`, `sed`,
+`tr`, `wc`, `fold`, `sort`). No non-standard packages are needed.
+
 ## Usage
 
 ```sh
