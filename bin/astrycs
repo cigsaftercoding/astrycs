@@ -37,6 +37,7 @@ Commands:
   swapcase <text>  Swap the case of every letter.
   initials <text>  Extract the initials of each word.
   starts-with <prefix> <text>  Test a prefix.
+  ends-with <suffix> <text>  Test a suffix.
   help           Show this message.
 EOF
 }
@@ -254,6 +255,14 @@ case "$cmd" in
         if [ $# -gt 0 ]; then shift; fi
         case "$*" in
             "$prefix"*) printf 'yes\n' ;;
+            *) printf 'no\n' ;;
+        esac
+        ;;
+    ends-with)
+        suffix="${1:-}"
+        if [ $# -gt 0 ]; then shift; fi
+        case "$*" in
+            *"$suffix") printf 'yes\n' ;;
             *) printf 'no\n' ;;
         esac
         ;;

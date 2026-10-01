@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- `ends-with` command.
 - `starts-with` command.
 - `initials` command.
 - `swapcase` command.

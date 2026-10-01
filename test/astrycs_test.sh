@@ -101,6 +101,11 @@ check "unknown command fails" "1" "$(./bin/astrycs nope-nope >/dev/null 2>&1 || 
 
 check "repeat 0 emits nothing" "" "$(./bin/astrycs repeat 0 hi)"
 
+check "ends-with detects a suffix" "yes" "$(./bin/astrycs ends-with lo hello)"
+
+check "ends-with rejects a wrong suffix" "no" "$(./bin/astrycs ends-with xx hello)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
