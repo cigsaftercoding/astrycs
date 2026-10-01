@@ -99,6 +99,8 @@ check "starts-with rejects a wrong prefix" "no" "$(./bin/astrycs starts-with xx 
 
 check "unknown command fails" "1" "$(./bin/astrycs nope-nope >/dev/null 2>&1 || echo $?)"
 
+check "repeat 0 emits nothing" "" "$(./bin/astrycs repeat 0 hi)"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
