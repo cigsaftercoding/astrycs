@@ -106,6 +106,8 @@ check "ends-with detects a suffix" "yes" "$(./bin/astrycs ends-with lo hello)"
 check "ends-with rejects a wrong suffix" "no" "$(./bin/astrycs ends-with xx hello)"
 
 
+check "nospace leaves no trailing space" "a b" "$(./bin/astrycs nospace 'a     b' | sed -e 's/ $//')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
