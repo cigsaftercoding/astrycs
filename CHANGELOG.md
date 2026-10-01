@@ -39,3 +39,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - `strip` command for deleting characters.
 - `title` command for title-casing text.
 - `nospace` command for collapsing whitespace.
+
+### Changed
+- shellcheck lint step in CI.
