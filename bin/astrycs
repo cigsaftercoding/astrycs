@@ -1,0 +1,44 @@
+#!/usr/bin/env sh
+# astrycs — a tiny, dependency-free helper toolkit.
+set -eu
+
+usage() {
+    cat <<'EOF'
+astrycs <command> [args]
+
+Commands:
+  echo <text>    Print text back.
+  upper <text>   Print text in upper case.
+  repeat N TEXT  Print TEXT N times.
+  help           Show this message.
+EOF
+}
+
+cmd="${1:-help}"
+[ $# -gt 0 ] && shift
+
+case "$cmd" in
+    echo)
+        printf '%s\n' "$*"
+        ;;
+    upper)
+        printf '%s\n' "$*" | tr '[:lower:]' '[:upper:]'
+        ;;
+    repeat)
+        n="${1:-1}"
+        shift || true
+        i=0
+        while [ "$i" -lt "$n" ]; do
+            printf '%s\n' "$*"
+            i=$((i + 1))
+        done
+        ;;
+    help | -h | --help)
+        usage
+        ;;
+    *)
+        printf 'unknown command: %s\n' "$cmd" >&2
+        usage >&2
+        exit 1
+        ;;
+esac
