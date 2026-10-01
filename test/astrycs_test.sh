@@ -135,6 +135,8 @@ check "default fills in empty text" "none" "$(./bin/astrycs default none '')"
 check "default keeps real text" "hi" "$(./bin/astrycs default none hi)"
 
 
+check "take keeps the leading words" "a b" "$(./bin/astrycs take 2 'a b c')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
