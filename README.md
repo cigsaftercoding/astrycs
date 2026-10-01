@@ -30,6 +30,7 @@ dependencies beyond a POSIX shell.
 | `slug <text>` | Convert text into a url slug |
 | `pad <width> <text>` | Left-pad text with spaces up to `<width>` |
 | `reverse <text>` | Reverse the text |
+| `strip <chars> <text>` | Delete the given characters from the text |
 | `help` | Show usage |
 
 ## Development

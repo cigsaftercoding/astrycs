@@ -17,3 +17,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - `slug` command for generating url slugs.
 - `pad` command for fixed-width output.
 - `reverse` command for reversing text.
+- `strip` command for deleting characters.

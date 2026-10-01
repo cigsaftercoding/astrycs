@@ -35,6 +35,8 @@ check "pad left-pads to width" "  hi" "$(./bin/astrycs pad 4 hi)"
 
 check "reverse flips characters" "olleh" "$(./bin/astrycs reverse hello)"
 
+check "strip removes characters" "heo" "$(./bin/astrycs strip l hello)"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
