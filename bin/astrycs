@@ -39,6 +39,7 @@ Commands:
   starts-with <prefix> <text>  Test a prefix.
   ends-with <suffix> <text>  Test a suffix.
   contains <needle> <text>  Test for a substring.
+  is-empty <text>  Report whether the text is empty.
   help           Show this message.
 EOF
 }
@@ -274,6 +275,9 @@ case "$cmd" in
             *"$needle"*) printf 'yes\n' ;;
             *) printf 'no\n' ;;
         esac
+        ;;
+    is-empty)
+        if [ -z "$*" ]; then printf 'yes\n'; else printf 'no\n'; fi
         ;;
     help | -h | --help)
         usage

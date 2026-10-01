@@ -59,6 +59,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `starts-with <prefix> <text>` | Test a prefix |
 | `ends-with <suffix> <text>` | Test a suffix |
 | `contains <needle> <text>` | Test for a substring |
+| `is-empty <text>` | Report whether the text is empty |
 | `help` | Show usage |
 
 ## Exit codes

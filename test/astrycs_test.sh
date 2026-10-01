@@ -117,6 +117,11 @@ check "contains finds a substring" "yes" "$(./bin/astrycs contains ell hello)"
 check "contains rejects a missing substring" "no" "$(./bin/astrycs contains zzz hello)"
 
 
+check "is-empty detects empty text" "yes" "$(./bin/astrycs is-empty '')"
+
+check "is-empty rejects real text" "no" "$(./bin/astrycs is-empty x)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
