@@ -27,6 +27,7 @@ Commands:
   head <n> <text>  Print only the first <n> lines.
   tail <n> <text>  Print only the last <n> lines.
   unique <text>  Sort the lines and drop duplicates.
+  sortlines <text>  Sort the lines alphabetically.
   help           Show this message.
 EOF
 }
@@ -154,6 +155,9 @@ case "$cmd" in
         ;;
     unique)
         printf '%s\n' "$*" | sort -u
+        ;;
+    sortlines)
+        printf '%s\n' "$*" | sort
         ;;
     help | -h | --help)
         usage
