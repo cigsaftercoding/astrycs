@@ -70,6 +70,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `count-char <char> <text>` | Count occurrences of a character |
 | `sum [numbers...]` | Add the given numbers |
 | `max [numbers...]` | Print the largest number |
+| `min [numbers...]` | Print the smallest number |
 | `help` | Show usage |
 
 ## Exit codes
