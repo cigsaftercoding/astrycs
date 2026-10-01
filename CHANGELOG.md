@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- `camel` command for camelCase conversion.
 - Runtime requirements section in the readme.
 - Extra usage examples in the readme.
 - `replace` command for substring replacement.
