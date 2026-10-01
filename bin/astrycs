@@ -17,6 +17,7 @@ Commands:
   slug <text>   Convert text into a url slug.
   pad <width> <text>  Left-pad text with spaces up to width.
   reverse <text>  Reverse the text.
+  strip <chars> <text>  Delete the given characters from the text.
   help           Show this message.
 EOF
 }
@@ -90,6 +91,11 @@ case "$cmd" in
                 out = out substr($0, i, 1)
             print out
         }'
+        ;;
+    strip)
+        chars="${1:-}"
+        if [ $# -gt 0 ]; then shift; fi
+        printf '%s\n' "$*" | tr -d "$chars"
         ;;
     help | -h | --help)
         usage
