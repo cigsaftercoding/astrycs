@@ -57,6 +57,14 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 
 `0` on success, `1` for an unknown command or a usage error.
 
+## Composition
+
+Commands read and write plain text, so they pipe together:
+
+```sh
+./bin/astrycs title "hello world" | ./bin/astrycs reverse
+```
+
 ## Development
 
 ```sh
