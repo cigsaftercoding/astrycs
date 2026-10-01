@@ -65,6 +65,7 @@ Examples:
   center <width> <text>  Center text within a width.
   truncate <width> <text>  Shorten text to a width.
   mask <keep> <text>  Mask the middle of a string.
+  squeeze <text>  Collapse runs of repeated characters.
   help           Show this message.
 EOF
 }
@@ -477,6 +478,19 @@ case "$cmd" in
                 c = substr(s, i, 1)
                 if (i <= k || i > n - k) out = out c
                 else out = out "*"
+            }
+            print out
+        }'
+        ;;
+    squeeze)
+        printf '%s\n' "$*" | awk '{
+            s = $0
+            out = ""
+            prev = ""
+            for (i = 1; i <= length(s); i++) {
+                c = substr(s, i, 1)
+                if (c != prev) out = out c
+                prev = c
             }
             print out
         }'

@@ -80,6 +80,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `center <width> <text>` | Center text within a width |
 | `truncate <width> <text>` | Shorten text to a width |
 | `mask <keep> <text>` | Mask the middle of a string |
+| `squeeze <text>` | Collapse runs of repeated characters |
 | `help` | Show usage |
 
 ## Exit codes
