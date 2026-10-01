@@ -46,6 +46,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - `nospace` command for collapsing whitespace.
 
 ### Changed
+- Multiline input tests.
 - Trailing whitespace regression test.
 - Test for repeat 0.
 - Test asserting the unknown-command exit code.

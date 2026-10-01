@@ -108,6 +108,10 @@ check "ends-with rejects a wrong suffix" "no" "$(./bin/astrycs ends-with xx hell
 
 check "nospace leaves no trailing space" "a b" "$(./bin/astrycs nospace 'a     b' | sed -e 's/ $//')"
 
+check "reverse reverses each line independently" "a
+bb
+ccc" "$(./bin/astrycs reverse "$(printf 'a\nbb\nccc')")"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
