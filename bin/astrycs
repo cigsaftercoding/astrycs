@@ -13,6 +13,7 @@ Commands:
   lower <text>   Print text in lower case.
   len <text>    Print the length of the text.
   trim <text>   Trim surrounding whitespace.
+  join <sep> [text...]  Join the remaining arguments with <sep>.
   help           Show this message.
 EOF
 }
@@ -48,6 +49,21 @@ case "$cmd" in
         t="${t#"${t%%[![:space:]]*}"}"
         t="${t%"${t##*[![:space:]]}"}"
         printf '%s\n' "$t"
+        ;;
+    join)
+        sep="${1:-}"
+        if [ $# -gt 0 ]; then shift; fi
+        out=""
+        first=1
+        for word in "$@"; do
+            if [ "$first" -eq 1 ]; then
+                out="$word"
+                first=0
+            else
+                out="$out$sep$word"
+            fi
+        done
+        printf '%s\n' "$out"
         ;;
     help | -h | --help)
         usage

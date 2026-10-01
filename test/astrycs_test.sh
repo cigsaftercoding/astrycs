@@ -27,6 +27,8 @@ check "len counts characters" "5" "$(./bin/astrycs len hello)"
 
 check "trim strips surrounding space" "hello" "$(./bin/astrycs trim '   hello   ')"
 
+check "join inserts the separator" "a,b,c" "$(./bin/astrycs join , a b c)"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
