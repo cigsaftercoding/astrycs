@@ -74,6 +74,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `abs <n>` | Print the absolute value of a number |
 | `round <n>` | Round a number to the nearest integer |
 | `even <n>` | Report whether a number is even |
+| `odd <n>` | Report whether a number is odd |
 | `help` | Show usage |
 
 ## Exit codes
