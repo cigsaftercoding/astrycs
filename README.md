@@ -14,6 +14,8 @@ dependencies beyond a POSIX shell.
 ./bin/astrycs help
 ./bin/astrycs upper "hello world"
 ./bin/astrycs repeat 3 "again"
+./bin/astrycs slug "Hello, World!"
+./bin/astrycs pad 10 "total"
 ```
 
 ## Commands
