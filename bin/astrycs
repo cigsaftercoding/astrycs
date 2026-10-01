@@ -58,6 +58,7 @@ Examples:
   min [numbers...]  Print the smallest number.
   abs <n>  Print the absolute value of a number.
   round <n>  Round a number to the nearest integer.
+  even <n>  Report whether a number is even.
   help           Show this message.
 EOF
 }
@@ -398,6 +399,9 @@ case "$cmd" in
             if ($1 < 0) printf "%d\n", -int(-$1 + 0.5)
             else printf "%d\n", int($1 + 0.5)
         }'
+        ;;
+    even)
+        printf '%s\n' "$*" | awk '{ print ($1 % 2 == 0 ? "yes" : "no") }'
         ;;
     help | -h | --help)
         usage

@@ -164,6 +164,11 @@ check "round rounds up" "3" "$(./bin/astrycs round 2.6)"
 check "round rounds down" "2" "$(./bin/astrycs round 2.4)"
 
 
+check "even accepts even numbers" "yes" "$(./bin/astrycs even 4)"
+
+check "even rejects odd numbers" "no" "$(./bin/astrycs even 5)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
