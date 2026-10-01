@@ -54,6 +54,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `kebab <text>` | Convert text to kebab-case |
 | `snake <text>` | Convert text to snake_case |
 | `capitalize <text>` | Upper-case the first letter only |
+| `swapcase <text>` | Swap the case of every letter |
 | `help` | Show usage |
 
 ## Exit codes

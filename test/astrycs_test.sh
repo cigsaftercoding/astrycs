@@ -80,6 +80,8 @@ check "snake joins words with underscores" "hello_world" "$(./bin/astrycs snake 
 
 check "capitalize only touches the first letter" "Hello world" "$(./bin/astrycs capitalize 'hello WORLD')"
 
+check "swapcase inverts each letter" "hELLO" "$(./bin/astrycs swapcase Hello)"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
