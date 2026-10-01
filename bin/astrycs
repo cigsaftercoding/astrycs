@@ -46,6 +46,7 @@ Examples:
   $ astrycs title "hello world"
 
   is-number <text>  Report whether the text is numeric.
+  split <sep> <text>  Split text on a separator, one per line.
   help           Show this message.
 EOF
 }
@@ -290,6 +291,20 @@ case "$cmd" in
             ''|*[!0-9.-]*) printf 'no\n' ;;
             *) printf 'yes\n' ;;
         esac
+        ;;
+    split)
+        sep="${1:-,}"
+        if [ $# -gt 0 ]; then shift; fi
+        printf '%s\n' "$*" | awk -v s="$sep" '{
+            n = length(s)
+            rest = $0
+            while (length(rest) > 0) {
+                p = index(rest, s)
+                if (p == 0) { print rest; break }
+                print substr(rest, 1, p - 1)
+                rest = substr(rest, p + n)
+            }
+        }'
         ;;
     help | -h | --help)
         usage
