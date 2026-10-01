@@ -67,6 +67,8 @@ check "sortlines sorts alphabetically" "a
 b" "$(./bin/astrycs sortlines 'b
 a')"
 
+check "csv-join quotes cells containing the separator" '"a,b",c' "$(./bin/astrycs csv-join , 'a,b' c)"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

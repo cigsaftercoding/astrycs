@@ -28,6 +28,7 @@ Commands:
   tail <n> <text>  Print only the last <n> lines.
   unique <text>  Sort the lines and drop duplicates.
   sortlines <text>  Sort the lines alphabetically.
+  csv-join <sep> [text...]  Join arguments as csv cells.
   help           Show this message.
 EOF
 }
@@ -158,6 +159,19 @@ case "$cmd" in
         ;;
     sortlines)
         printf '%s\n' "$*" | sort
+        ;;
+    csv-join)
+        sep="${1:-,}"
+        if [ $# -gt 0 ]; then shift; fi
+        out=""
+        first=1
+        for cell in "$@"; do
+            case "$cell" in
+                *"$sep"* | *'"'*) cell="\"$(printf '%s' "$cell" | sed -e 's/"/""/g')\"" ;;
+            esac
+            if [ "$first" -eq 1 ]; then out="$cell"; first=0; else out="${out}${sep}${cell}"; fi
+        done
+        printf '%s\n' "$out"
         ;;
     help | -h | --help)
         usage
