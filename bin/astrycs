@@ -47,6 +47,7 @@ Examples:
 
   is-number <text>  Report whether the text is numeric.
   split <sep> <text>  Split text on a separator, one per line.
+  default <fallback> <text>  Fall back when the text is empty.
   help           Show this message.
 EOF
 }
@@ -305,6 +306,11 @@ case "$cmd" in
                 rest = substr(rest, p + n)
             }
         }'
+        ;;
+    default)
+        fallback="${1:-}"
+        if [ $# -gt 0 ]; then shift; fi
+        if [ -z "$*" ]; then printf '%s\n' "$fallback"; else printf '%s\n' "$*"; fi
         ;;
     help | -h | --help)
         usage

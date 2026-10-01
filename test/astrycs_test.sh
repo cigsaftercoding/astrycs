@@ -130,6 +130,11 @@ check "is-number rejects letters" "no" "$(./bin/astrycs is-number 12a)"
 check "split prints one field per line" "a
 b" "$(./bin/astrycs split , 'a,b')" 
 
+check "default fills in empty text" "none" "$(./bin/astrycs default none '')"
+
+check "default keeps real text" "hi" "$(./bin/astrycs default none hi)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
