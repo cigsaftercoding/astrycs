@@ -29,6 +29,8 @@ check "trim strips surrounding space" "hello" "$(./bin/astrycs trim '   hello   
 
 check "join inserts the separator" "a,b,c" "$(./bin/astrycs join , a b c)"
 
+check "slug builds url slugs" "hello-world" "$(./bin/astrycs slug 'Hello World')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1

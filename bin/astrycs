@@ -14,6 +14,7 @@ Commands:
   len <text>    Print the length of the text.
   trim <text>   Trim surrounding whitespace.
   join <sep> [text...]  Join the remaining arguments with <sep>.
+  slug <text>   Convert text into a url slug.
   help           Show this message.
 EOF
 }
@@ -64,6 +65,11 @@ case "$cmd" in
             fi
         done
         printf '%s\n' "$out"
+        ;;
+    slug)
+        printf '%s\n' "$*" |
+            tr '[:upper:]' '[:lower:]' |
+            sed -e 's/[^a-z0-9][^a-z0-9]*/-/g' -e 's/^-//' -e 's/-$//'
         ;;
     help | -h | --help)
         usage
