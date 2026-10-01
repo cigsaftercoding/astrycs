@@ -72,6 +72,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `max [numbers...]` | Print the largest number |
 | `min [numbers...]` | Print the smallest number |
 | `abs <n>` | Print the absolute value of a number |
+| `round <n>` | Round a number to the nearest integer |
 | `help` | Show usage |
 
 ## Exit codes

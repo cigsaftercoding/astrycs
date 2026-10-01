@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- `round` command.
 - `abs` command.
 - `min` command.
 - `max` command.
