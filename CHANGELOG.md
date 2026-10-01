@@ -59,3 +59,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - dash job in CI to catch bashisms.
 - CI matrix across ubuntu and macos.
 - shellcheck lint step in CI.
+
+### Fixed
+- Explicit zero exit for `help`.
