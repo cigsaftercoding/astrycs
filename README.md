@@ -71,6 +71,7 @@ A POSIX shell plus the usual text utilities (`awk`, `sed`,
 | `sum [numbers...]` | Add the given numbers |
 | `max [numbers...]` | Print the largest number |
 | `min [numbers...]` | Print the smallest number |
+| `abs <n>` | Print the absolute value of a number |
 | `help` | Show usage |
 
 ## Exit codes

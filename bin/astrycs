@@ -56,6 +56,7 @@ Examples:
   sum [numbers...]  Add the given numbers.
   max [numbers...]  Print the largest number.
   min [numbers...]  Print the smallest number.
+  abs <n>  Print the absolute value of a number.
   help           Show this message.
 EOF
 }
@@ -387,6 +388,9 @@ case "$cmd" in
             for (i = 2; i <= NF; i++) if ($i < m) m = $i
         }
         END { if (seen) print m }'
+        ;;
+    abs)
+        printf '%s\n' "$*" | awk '{ print ($1 < 0 ? -$1 : $1) }'
         ;;
     help | -h | --help)
         usage

@@ -156,6 +156,9 @@ check "max finds the largest" "9" "$(./bin/astrycs max 3 9 5)"
 check "min finds the smallest" "3" "$(./bin/astrycs min 3 9 5)"
 
 
+check "abs drops the sign" "5" "$(./bin/astrycs abs -5)"
+
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
