@@ -17,5 +17,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run tests
         run: sh test/astrycs_test.sh
+      - name: Run tests under dash
+        run: dash test/astrycs_test.sh
       - name: Lint
         run: shellcheck bin/astrycs test/astrycs_test.sh
