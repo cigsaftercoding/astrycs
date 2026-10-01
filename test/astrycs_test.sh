@@ -223,6 +223,9 @@ check "yesno accepts y" "yes" "$(./bin/astrycs yesno y)"
 check "yesno rejects anything else" "no" "$(./bin/astrycs yesno maybe)"
 
 
+check "help exits zero" "0" "$(./bin/astrycs help >/dev/null; echo $?)"
+check "a known command exits zero" "0" "$(./bin/astrycs upper hi >/dev/null; echo $?)"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
