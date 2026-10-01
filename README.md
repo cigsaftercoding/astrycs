@@ -40,6 +40,7 @@ dependencies beyond a POSIX shell.
 | `head <n> <text>` | Print only the first `<n>` lines |
 | `tail <n> <text>` | Print only the last `<n>` lines |
 | `unique <text>` | Sort the lines and drop duplicates |
+| `sortlines <text>` | Sort the lines alphabetically |
 | `help` | Show usage |
 
 ## Development

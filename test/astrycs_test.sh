@@ -63,6 +63,10 @@ b" "$(./bin/astrycs unique 'b
 a
 b')"
 
+check "sortlines sorts alphabetically" "a
+b" "$(./bin/astrycs sortlines 'b
+a')"
+
 if [ "$fail" -ne 0 ]; then
     printf '\nsome tests failed\n' >&2
     exit 1
